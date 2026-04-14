@@ -1,0 +1,9 @@
+(:Reto3 Genera una estructura HTML
+(<url>):)
+for $c in //libro
+let $novedad :="(¡Novedad!)",
+    $precio := $var/precio,
+where
+return file:write()
+
+ 

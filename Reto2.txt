@@ -1,0 +1,11 @@
+(:Reto 2:Quiero un informe que nos diga cuantos libros tiene cada autor en nuestra biblioteca:)
+
+for $autor in //Biblioteca/autor@
+($categoria="programacion")
+let $autor := $c/@categoria,
+    $autor := $c/@libro,
+where $autor
+order by $categoria descending
+ return 
+  resultadoAutor={$categoria/libro/text()} {$autor}
+  resultadoLibro={$categoria/autor/next()} {$Libro}

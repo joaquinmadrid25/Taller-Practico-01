@@ -1,0 +1,14 @@
+(:Reto 1: Muestra los titulos de los libros de la categoria "programacion" que valgan mas de 30€, ordenados por titulo de la Z a la A:)
+
+for $libro in //Biblioteca/libro@ (categoria="programacion" )
+let $titulo := $var/@categoria,
+    $titlo := $var/@precio,
+where $precio>30
+order by $categoria descending
+ return 
+  resultadoTitulo={$categoria/titulo/text()} {$precio}
+  resultadoPrecio={$categoria/precio/next()} {$Titulo}
+
+    
+
+    
